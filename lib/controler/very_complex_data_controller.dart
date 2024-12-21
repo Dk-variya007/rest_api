@@ -17,7 +17,7 @@ class ComplexController extends GetxController {
   getData() async {
     try {
       final response =
-          await http.get(Uri.parse("https://reqres.in/api/users?page=2"));
+          await http.get(Uri.parse("https://jsonplaceholder.typicode.com/users"));
       if (response.statusCode == 200) {
         var data = jsonDecode(response.body);
         complexData.value = VeryComplexData.fromJson(data);
